@@ -27,4 +27,7 @@ Install it and use it. It's fairly self explanitory.
 
 ## Additional information
 
-License: MIT"# easy_opener" 
+Source: https://github.com/flutterfromscratch/easy_opener
+
+License: MIT
+
