@@ -24,6 +24,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - name: Version-Tool
+        uses: HydrolienF/Version-Tool@0.5.5
+        id: version
+      - name: Update values.yaml
+        uses: fjogeleit/yaml-update-action@master
+        with:
+          valueFile: 'pubspec.yaml'
+          propertyPath: 'version'
+          value: ${{steps.version.outputs.version}}
+          commitChange: false
+          updateFile: true
       - name: Publish Dart/Flutter package
         uses: sakebook/actions-flutter-pub-publisher@v1.3.1
         with:
