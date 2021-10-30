@@ -24,11 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Get version code
-        id: version_code
-        uses: lucasfe/version_code_generator@v1.0.0
-        with:
-          offset: '5'
       - name: Update values.yaml
         uses: fjogeleit/yaml-update-action@master
         with:
