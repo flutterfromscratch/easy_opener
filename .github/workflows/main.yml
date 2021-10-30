@@ -34,7 +34,7 @@ jobs:
         with:
           valueFile: 'pubspec.yaml'
           propertyPath: 'version'
-          value: 0.0.${{steps.version_code}}
+          value: 0.0.${{steps.version_code.code}}
           commitChange: false
           updateFile: true
       - name: Publish Dart/Flutter package
