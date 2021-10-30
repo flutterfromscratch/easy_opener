@@ -27,7 +27,7 @@ jobs:
       - name: Publish Dart/Flutter package
         uses: sakebook/actions-flutter-pub-publisher@v1.3.1
         with:
-          credential: ${{ secrets.CREDENTIAL_JSON }}
+          credential: ${{ secrets.CREDENTIALS }}
           flutter_package: true
           skip_test: true # One day I should write some tests
           dry_run: false
