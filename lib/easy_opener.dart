@@ -9,12 +9,14 @@ class EasyOpener extends StatefulWidget {
   final Color backgroundColor;
   final Curve? animationCurve;
   final Color? boxBackgroundColor;
+  final BuildContext context;
 
   const EasyOpener({
     Key? key,
     required this.child,
     required this.onComplete,
     required this.backgroundColor,
+    required this.context,
     this.animationCurve = Curves.bounceOut,
     this.boxBackgroundColor = Colors.white,
   }) : super(key: key);
